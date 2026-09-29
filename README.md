@@ -26,3 +26,16 @@ npm run lint     # lint with ESLint
 npm run format   # format with Prettier
 npm test         # run Vitest tests
 ```
+
+## Database
+
+This project uses [Prisma](https://www.prisma.io) with a local SQLite
+database (`prisma/dev.db`, gitignored).
+
+```bash
+npx prisma migrate dev   # create/apply migrations from prisma/schema.prisma
+npx prisma db seed       # populate the database with sample agents
+```
+
+`prisma/schema.prisma` defines the data model. `prisma/seed.ts` contains
+the (idempotent) seed data.
