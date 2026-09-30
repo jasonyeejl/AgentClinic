@@ -39,3 +39,14 @@ npx prisma db seed       # populate the database with sample agents
 
 `prisma/schema.prisma` defines the data model. `prisma/seed.ts` contains
 the (idempotent) seed data.
+
+## Dashboard
+
+`GET /api/agents` is a Route Handler that reads all `Agent` rows via
+Prisma (ordered by `createdAt` ascending) and returns them as JSON.
+
+`/dashboard` is a client component that fetches from `/api/agents` and
+renders a table of agents (`name`, `email`, `createdAt`), with a
+"Loading…" state while the fetch is in flight and a "No agents yet."
+message when the list is empty. There is no authentication on this
+route yet.
