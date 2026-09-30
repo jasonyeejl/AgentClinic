@@ -29,39 +29,36 @@ state.
 - Two roles: `agent` and `staff`.
 - Gate `/dashboard` behind login.
 
-## Phase 4 — Ailments
+## Phase 4 — Ailments & Therapies
 
 - Extend schema: `Ailment` (linked to `Agent`).
 - Agent-facing page to report/view their own ailments.
 - Staff-facing page to view all ailments.
-
-## Phase 5 — Therapies
-
 - Extend schema: `Therapy`, and a link between `Ailment` and recommended
   `Therapy`.
 - Staff can assign a therapy to an ailment.
 - Agent can view therapies assigned to them.
 
-## Phase 6 — Appointments (booking)
+## Phase 5 — Appointments (booking)
 
 - Extend schema: `Appointment` (agent, staff, therapy, time slot, status).
 - Agent-facing flow to request/book an appointment.
 - Staff-facing view to see and manage upcoming appointments.
 
-## Phase 7 — Dashboard polish
+## Phase 6 — Dashboard polish
 
 - Apply Tailwind styling for an attractive, modern look across agent and
   staff dashboards (Steve's requirement).
 - Responsive layout check on modern browsers.
 
-## Phase 8 — Reliability hardening
+## Phase 7 — Reliability hardening
 
 - Add error boundaries / loading states to key pages.
 - Add Playwright end-to-end tests for: login, report ailment, book
   appointment.
 - Add basic input validation on all forms and API routes.
 
-## Phase 9 — Stretch / future
+## Phase 8 — Stretch / future
 
 - Notifications/reminders for upcoming appointments.
 - Search/filter on dashboards.
